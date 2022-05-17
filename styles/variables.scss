@@ -1,0 +1,27 @@
+$white: #FFF;
+$yellow: #FECF31;
+$red: #EB1751;
+$green: #2ED57A;
+$blue: #239EEE;
+$pink: #DC2A81;
+$purple-1: #23135D;
+$purple-2: #332167;
+$purple-3: #6549C5;
+
+$gradient-green-blue: linear-gradient(90deg, $green 0%, $blue 100%);
+$gradient-pink-purple: linear-gradient(90deg, $pink 0%, #A830F0 100%);
+$gradient-yellow-orange: linear-gradient(180deg, #FFDA16 0%, #FF2E00 100%);
+
+$home_page_padding_x: 32px;
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}

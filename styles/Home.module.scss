@@ -1,0 +1,60 @@
+@import './variables.scss';
+
+.main {
+  min-height: 100vh;
+  padding: 4rem $home_page_padding_x;
+  flex: 1;
+  background: $purple-1;
+  background: linear-gradient(180deg, #1b1e42 0%, #000 100%);
+  overflow: hidden;
+  display: flex;
+
+  @include desktop {
+    padding: 3rem $home_page_padding_x;
+  }
+
+  .background_placeholder,
+  .gradient_overlay,
+  video {
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .background_placeholder {
+    &.desktop {
+      display: none;
+    }
+    @include tablet {
+      &.desktop {
+        display: block;
+      }
+      &.mobile {
+        display: none;
+      }
+    }
+  }
+
+  .gradient_overlay {
+    background: linear-gradient(180deg, #412EA8 0%, $purple-1 100%);
+    opacity: 0.2;
+  }
+}
+
+.container {
+  width: calc(100vw - 64px);
+  margin: auto;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+
+  @include desktop {
+    justify-content: initial;
+  }
+}

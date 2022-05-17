@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+
+.players {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  color: $white;
+  text-align: center;
+  max-width: 311px;
+  margin: 0 auto;
+
+  p {
+    margin: 9px 0 0;
+  }
+}
+

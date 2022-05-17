@@ -1,0 +1,30 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+  position: relative;
+  $grid_gap: 8px;
+  $padding: 8px;
+  $row_height: calc(
+    (100vw - ($home_page_padding_x * 2) - ($grid_gap * 2) - ($padding * 2)) / 3
+  );
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, $row_height);
+  gap: $grid_gap;
+  background: $purple-3;
+  padding: $padding;
+  margin-top: 40px;
+
+  @include tablet {
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    max-width: 482px;
+    margin: 40px auto 0;
+  }
+
+  &,
+  button {
+    border-radius: 16px;
+  }
+}

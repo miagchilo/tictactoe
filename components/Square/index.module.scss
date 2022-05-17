@@ -1,0 +1,11 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+  background: $purple-2;
+  font-size: 80px;
+  padding: 0;
+
+  @include desktop {
+    font-size: 128px;
+  }
+}

@@ -1,0 +1,52 @@
+@import './variables.scss';
+
+.color_yellow {
+  color: $yellow;
+}
+.color_red {
+  color: $red;
+}
+
+.background_gradient_green_blue {
+  background: $gradient-green-blue;
+}
+.background_gradient_pink_purple {
+  background: $gradient-pink-purple;
+}
+
+/*******************/
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  padding: 20px 18px;
+  font-size: 32px;
+  border-radius: 56px;
+  color: $white;
+  font-weight: 900;
+  border: none;
+  line-height: 1;
+  width: 100%;
+  cursor: pointer;
+}
+
+input {
+  &:focus {
+    outline: none;
+  }
+}
